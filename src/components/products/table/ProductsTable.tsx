@@ -12,7 +12,9 @@ import ReusableModalOpenButton from "../../../shared/ui/ReusableModalOpenButton"
 
 export const ProductsTable = () => {
   const [page, setPage] = useState(1);
-  const limit = 1;
+
+  // Количество товаров на странице (можно было и через query парамс сделать, но уже почти 9 утра и мне очень влом :( ))
+  const limit = 50;
 
   // Получение списка товаров с пагинацией
   const { data, isLoading, isError, error } = useProducts(page, limit);
